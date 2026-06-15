@@ -5,4 +5,4 @@ compatibility_date = "2026-06-16"
 [[d1_databases]]
 binding = "DB"
 database_name = "food_planner"
-database_id = "REPLACE_ME"
+database_id = "8fee4546-30ed-44af-a904-db631350340f"
