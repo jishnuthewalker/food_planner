@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weekly Meal Plan Â· Bangalore Kitchen</title>
+<title>Weekly Meal Plan · Bangalore Kitchen</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
@@ -31,7 +31,7 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* â”€â”€ Nav â”€â”€ */
+  /* ── Nav ── */
   nav {
     position: sticky; top: 0; z-index: 100;
     background: rgba(253,246,236,.92);
@@ -57,7 +57,7 @@
   .nav-link:hover { color: var(--deep); }
   .nav-link.active { background: var(--saffron); color: #fff; }
 
-  /* â”€â”€ Layout â”€â”€ */
+  /* ── Layout ── */
   .page { display: none; padding: 32px 16px 64px; max-width: 1100px; margin: 0 auto; animation: fade .25s; }
   .page.active { display: block; }
   @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
@@ -74,14 +74,14 @@
   h1 span { color: var(--saffron); }
   .subtitle { margin-top: 10px; color: var(--muted); font-size: 14px; }
 
-  /* â”€â”€ Grid â”€â”€ */
+  /* ── Grid ── */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     gap: 16px;
   }
 
-  /* â”€â”€ Day card â”€â”€ */
+  /* ── Day card ── */
   .card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -287,7 +287,7 @@
   .rest-label { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--muted); }
   .rest-sub { font-size: 12px; color: #B0A090; margin-top: 4px; }
 
-  /* â”€â”€ Recipes page â”€â”€ */
+  /* ── Recipes page ── */
   .recipe-nav {
     display: flex; flex-wrap: wrap; gap: 8px;
     justify-content: center; margin-bottom: 28px;
@@ -328,7 +328,7 @@
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; gap: 0; } }
 
-  /* â”€â”€ Grocery page â”€â”€ */
+  /* ── Grocery page ── */
   .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px; }
   .filter-btn {
     font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
@@ -359,7 +359,7 @@
   .item.checked .item-name { text-decoration: line-through; }
   .item-check { width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid var(--border); flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all .15s; }
   .item.checked .item-check { background: var(--check); border-color: var(--check); }
-  .item.checked .item-check::after { content: 'âœ“'; color: #fff; font-size: 11px; font-weight: 700; }
+  .item.checked .item-check::after { content: '✓'; color: #fff; font-size: 11px; font-weight: 700; }
   .item-name { font-size: 13.5px; font-weight: 500; flex: 1; line-height: 1.4; }
   .item-qty { font-size: 11.5px; color: var(--saffron); font-weight: 600; white-space: nowrap; margin-top: 1px; }
   .item-note { font-size: 11px; color: var(--muted); margin-top: 2px; line-height: 1.4; }
@@ -395,7 +395,7 @@
   <header>
     <p class="eyebrow">Bangalore Home Kitchen</p>
     <h1>Your Week of <span>Good Eating</span></h1>
-    <p class="subtitle">One main each day Â· Tap a toggle to switch options, or open the full recipe</p>
+    <p class="subtitle">One main each day · Tap a toggle to switch options, or open the full recipe</p>
   </header>
 
   <div class="grid">
@@ -408,15 +408,15 @@
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Atta, potatoes, green chilli, ginger, coriander leaves, jeera, amchur, curd, ghee, achaar</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-aloo')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-aloo')">View full recipe →</button>
       </div>
       <div class="meal-panel" id="mon-b">
         <p class="meal-name">Gobi Paratha</p>
-        <p class="meal-sub">Grated spiced cauliflower stuffing â€” lighter than aloo, great with white butter</p>
+        <p class="meal-sub">Grated spiced cauliflower stuffing — lighter than aloo, great with white butter</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Atta, cauliflower, green chilli, ginger, coriander leaves, ajwain, amchur, ghee, curd</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-gobi')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-gobi')">View full recipe →</button>
       </div>
       <div class="toggle-wrap"><div class="toggle">
         <button class="toggle-btn active" onclick="switchMeal('mon','a')">Aloo</button>
@@ -432,7 +432,7 @@
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Chicken, onion, tomato, grated coconut, ginger-garlic, red chilli, coriander powder, garam masala, curry leaves, oil</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-chickencurry')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-chickencurry')">View full recipe →</button>
       </div>
       <div class="meal-panel" id="tue-b">
         <p class="meal-name">Chicken Sukka</p>
@@ -440,7 +440,7 @@
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Chicken, dry red chilli, coriander seeds, grated coconut, onion, ginger-garlic, curry leaves, turmeric, ghee</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-sukka')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-sukka')">View full recipe →</button>
       </div>
       <div class="toggle-wrap"><div class="toggle">
         <button class="toggle-btn active" onclick="switchMeal('tue','a')">Curry</button>
@@ -452,19 +452,19 @@
       <div class="card-top"><p class="day-label">Wednesday</p><span class="tag tag-egg">Egg</span></div>
       <div class="meal-panel active" id="wed-a">
         <p class="meal-name">Egg Bhurji</p>
-        <p class="meal-sub">Spiced scrambled eggs with onion and tomato â€” quick, hearty, great with rotis</p>
+        <p class="meal-sub">Spiced scrambled eggs with onion and tomato — quick, hearty, great with rotis</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Eggs, onion, tomato, green chilli, coriander leaves, turmeric, red chilli powder, oil, salt</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-bhurji')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-bhurji')">View full recipe →</button>
       </div>
       <div class="meal-panel" id="wed-b">
         <p class="meal-name">Egg Curry</p>
-        <p class="meal-sub">Boiled eggs in a spiced onion-tomato gravy â€” goes well with rice or chapati</p>
+        <p class="meal-sub">Boiled eggs in a spiced onion-tomato gravy — goes well with rice or chapati</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Eggs, onion, tomato, ginger-garlic, red chilli, coriander powder, turmeric, garam masala, oil, coriander leaves</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-eggcurry')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-eggcurry')">View full recipe →</button>
       </div>
       <div class="toggle-wrap"><div class="toggle">
         <button class="toggle-btn active" onclick="switchMeal('wed','a')">Bhurji</button>
@@ -480,15 +480,15 @@
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Paneer, onion, tomato, cashews, butter, cream, ginger-garlic, red chilli, kasuri methi, garam masala</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-pbm')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-pbm')">View full recipe →</button>
       </div>
       <div class="meal-panel" id="thu-b">
         <p class="meal-name">Palak Paneer</p>
-        <p class="meal-sub">Paneer cubes in a smooth spinach gravy â€” lighter, nutritious, great with roti</p>
+        <p class="meal-sub">Paneer cubes in a smooth spinach gravy — lighter, nutritious, great with roti</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Paneer, spinach, onion, tomato, ginger-garlic, green chilli, cream, cumin, garam masala, butter</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-palak')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-palak')">View full recipe →</button>
       </div>
       <div class="toggle-wrap"><div class="toggle">
         <button class="toggle-btn active" onclick="switchMeal('thu','a')">Butter Masala</button>
@@ -500,19 +500,19 @@
       <div class="card-top"><p class="day-label">Friday</p><span class="tag tag-veg">Mix Veg</span></div>
       <div class="meal-panel active" id="fri-a">
         <p class="meal-name">Avial</p>
-        <p class="meal-sub">Kerala-style mixed vegetable coconut curry â€” light, flavourful, goes great with rice</p>
+        <p class="meal-sub">Kerala-style mixed vegetable coconut curry — light, flavourful, goes great with rice</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Raw banana, drumstick, carrot, beans, yam, curd, grated coconut, green chilli, turmeric, curry leaves, coconut oil</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-avial')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-avial')">View full recipe →</button>
       </div>
       <div class="meal-panel" id="fri-b">
         <p class="meal-name">Sambar with Veggies</p>
-        <p class="meal-sub">Toor dal sambar loaded with drumstick, brinjal, and tomato â€” classic with rice</p>
+        <p class="meal-sub">Toor dal sambar loaded with drumstick, brinjal, and tomato — classic with rice</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Toor dal, drumstick, brinjal, tomato, onion, tamarind, sambar powder, mustard seeds, curry leaves, asafoetida, oil</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-sambar')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-sambar')">View full recipe →</button>
       </div>
       <div class="toggle-wrap"><div class="toggle">
         <button class="toggle-btn active" onclick="switchMeal('fri','a')">Avial</button>
@@ -524,19 +524,19 @@
       <div class="card-top"><p class="day-label">Saturday</p><span class="tag tag-prawns">Prawns</span></div>
       <div class="meal-panel active" id="sat-a">
         <p class="meal-name">Prawn Masala</p>
-        <p class="meal-sub">Coastal Karnataka style â€” dry roasted spices, tamarind, coconut â€” serve with rice</p>
+        <p class="meal-sub">Coastal Karnataka style — dry roasted spices, tamarind, coconut — serve with rice</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Prawns, onion, tomato, grated coconut, tamarind, red chilli, coriander seeds, curry leaves, ginger-garlic, oil</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-prawnmasala')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-prawnmasala')">View full recipe →</button>
       </div>
       <div class="meal-panel" id="sat-b">
         <p class="meal-name">Prawn Gassi</p>
-        <p class="meal-sub">Udupi-style prawn curry with a rich coconut-tamarind base â€” best with neer dosa or rice</p>
+        <p class="meal-sub">Udupi-style prawn curry with a rich coconut-tamarind base — best with neer dosa or rice</p>
         <div class="divider"></div>
         <p class="ing-label">Ingredients</p>
         <p class="ing">Prawns, grated coconut, dry red chilli, tamarind, onion, coriander seeds, cumin, turmeric, garlic, coconut oil</p>
-        <button class="recipe-btn" onclick="gotoRecipe('r-gassi')">View full recipe â†’</button>
+        <button class="recipe-btn" onclick="gotoRecipe('r-gassi')">View full recipe →</button>
       </div>
       <div class="toggle-wrap"><div class="toggle">
         <button class="toggle-btn active" onclick="switchMeal('sat','a')">Masala</button>
@@ -545,9 +545,9 @@
     </div>
 
     <div class="card sunday">
-      <p class="rest-icon">ðŸŒ¿</p>
+      <p class="rest-icon">🌿</p>
       <p class="rest-label">Sunday</p>
-      <p class="rest-sub">Rest day â€” eat out or order in!</p>
+      <p class="rest-sub">Rest day — eat out or order in!</p>
     </div>
 
   </div>
@@ -558,7 +558,7 @@
   <header>
     <p class="eyebrow">All 12 Dishes</p>
     <h1>The <span>Recipes</span></h1>
-    <p class="subtitle">Home-style quantities, roughly 3â€“4 servings each Â· Tap a chip to jump</p>
+    <p class="subtitle">Home-style quantities, roughly 3–4 servings each · Tap a chip to jump</p>
   </header>
 
   <div class="page-actions">
@@ -566,7 +566,7 @@
     <button class="btn" id="unlockBtn" onclick="openUnlockModal()">Unlock Writes</button>
     <button class="btn primary" id="addDishBtn" onclick="openDishModal()" disabled>Add Dish</button>
   </div>
-  <p class="page-note" id="connectionNote">Loading household dishesâ€¦</p>
+  <p class="page-note" id="connectionNote">Loading household dishes…</p>
 
   <div class="recipe-nav">
     <button class="recipe-chip" onclick="gotoRecipe('r-aloo')">Aloo Paratha</button>
@@ -583,22 +583,22 @@
     <button class="recipe-chip" onclick="gotoRecipe('r-gassi')">Prawn Gassi</button>
   </div>
 
-  <div id="custom-dish-loading" class="dish-loading">Loading added dishes from the household libraryâ€¦</div>
+  <div id="custom-dish-loading" class="dish-loading">Loading added dishes from the household library…</div>
   <div id="custom-dish-empty" class="dish-empty hidden">No extra dishes yet. Unlock writes to add the first shared household recipe.</div>
   <div id="custom-dishes" class="grid"></div>
 
   <!-- ALOO PARATHA -->
   <div class="recipe-card" id="r-aloo">
-    <div class="recipe-head"><h2>Aloo Paratha</h2><span class="serves-pill">Makes ~7â€“8</span></div>
-    <p class="recipe-meta">Stuffed whole-wheat flatbread Â· Monday option</p>
+    <div class="recipe-head"><h2>Aloo Paratha</h2><span class="serves-pill">Makes ~7–8</span></div>
+    <p class="recipe-meta">Stuffed whole-wheat flatbread · Monday option</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Dough</p>
         <ul>
           <li>2 cups atta (whole wheat flour)</li>
-          <li>Â½ tsp salt</li>
+          <li>½ tsp salt</li>
           <li>1 tbsp oil</li>
-          <li>~Â¾ cup water (to knead)</li>
+          <li>~¾ cup water (to knead)</li>
         </ul>
         <p class="recipe-section-label">Stuffing</p>
         <ul>
@@ -606,10 +606,10 @@
           <li>1 tsp ginger, grated</li>
           <li>2 green chillies, finely chopped</li>
           <li>2 tbsp coriander leaves, chopped</li>
-          <li>Â½ tsp cumin powder</li>
+          <li>½ tsp cumin powder</li>
           <li>1 tsp red chilli powder</li>
-          <li>Â½ tsp garam masala</li>
-          <li>Â¾ tsp amchur (dry mango powder)</li>
+          <li>½ tsp garam masala</li>
+          <li>¾ tsp amchur (dry mango powder)</li>
           <li>Salt to taste</li>
           <li>Ghee / oil for roasting</li>
         </ul>
@@ -618,7 +618,7 @@
         <p class="recipe-section-label">Method</p>
         <ol>
           <li>Mix flour, salt and oil. Add water gradually and knead a soft, non-sticky dough. Rest covered 20 min.</li>
-          <li>Mash the boiled potatoes till no lumps remain. Mix in ginger, chillies, coriander and all spices. Taste and adjust salt â€” it should taste well-seasoned.</li>
+          <li>Mash the boiled potatoes till no lumps remain. Mix in ginger, chillies, coriander and all spices. Taste and adjust salt — it should taste well-seasoned.</li>
           <li>Divide dough and stuffing into equal balls. Roll a dough ball, place a stuffing ball in the centre, pleat the edges together and seal.</li>
           <li>Dust with flour and gently roll into a 6-inch disc, applying even pressure so it doesn't tear.</li>
           <li>Cook on a hot tawa, flip when base is partly cooked, brush with ghee, and flip till golden spots appear on both sides.</li>
@@ -631,27 +631,27 @@
   <!-- GOBI PARATHA -->
   <div class="recipe-card" id="r-gobi">
     <div class="recipe-head"><h2>Gobi Paratha</h2><span class="serves-pill">Makes ~8</span></div>
-    <p class="recipe-meta">Cauliflower-stuffed flatbread Â· Monday alternative</p>
+    <p class="recipe-meta">Cauliflower-stuffed flatbread · Monday alternative</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Dough</p>
         <ul>
           <li>2 cups atta</li>
-          <li>Â½ tsp salt</li>
-          <li>1 tbsp oil + Â½ tsp ajwain (carom seeds)</li>
+          <li>½ tsp salt</li>
+          <li>1 tbsp oil + ½ tsp ajwain (carom seeds)</li>
           <li>~1 cup water</li>
         </ul>
         <p class="recipe-section-label">Stuffing</p>
         <ul>
           <li>2 cups cauliflower, finely grated</li>
           <li>1 tsp ginger, grated</li>
-          <li>1â€“2 green chillies, finely chopped</li>
+          <li>1–2 green chillies, finely chopped</li>
           <li>2 tbsp coriander leaves</li>
           <li>1 tsp cumin (jeera)</li>
-          <li>Â½ tsp turmeric</li>
-          <li>Â½â€“1 tsp red chilli powder</li>
-          <li>Â½ tsp garam masala</li>
-          <li>Â½ tsp amchur</li>
+          <li>½ tsp turmeric</li>
+          <li>½–1 tsp red chilli powder</li>
+          <li>½ tsp garam masala</li>
+          <li>½ tsp amchur</li>
           <li>Salt (add just before stuffing)</li>
         </ul>
       </div>
@@ -659,8 +659,8 @@
         <p class="recipe-section-label">Method</p>
         <ol>
           <li>Knead a soft dough with flour, salt, oil and ajwain. Rest covered.</li>
-          <li>Grate cauliflower finely. (Traditional Punjabi style uses it raw; if you prefer, lightly sautÃ© with jeera, ginger and chillies for 2â€“3 min to remove moisture.)</li>
-          <li>Mix in all spices. Add salt only right before stuffing â€” salt makes cauliflower release water and the paratha will tear.</li>
+          <li>Grate cauliflower finely. (Traditional Punjabi style uses it raw; if you prefer, lightly sauté with jeera, ginger and chillies for 2–3 min to remove moisture.)</li>
+          <li>Mix in all spices. Add salt only right before stuffing — salt makes cauliflower release water and the paratha will tear.</li>
           <li>Stuff, seal and roll gently as for aloo paratha.</li>
           <li>Roast on a hot tawa with ghee till golden on both sides.</li>
           <li>Serve with white butter, curd or pickle.</li>
@@ -672,7 +672,7 @@
   <!-- CHICKEN CURRY -->
   <div class="recipe-card" id="r-chickencurry">
     <div class="recipe-head"><h2>Karnataka Chicken Curry</h2><span class="serves-pill">Serves 4</span></div>
-    <p class="recipe-meta">Coconut-based home-style curry Â· Tuesday option</p>
+    <p class="recipe-meta">Coconut-based home-style curry · Tuesday option</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Ingredients</p>
@@ -680,13 +680,13 @@
           <li>750 g chicken, with bone</li>
           <li>2 onions, finely chopped</li>
           <li>2 tomatoes, chopped/pureed</li>
-          <li>Â½ cup grated coconut</li>
+          <li>½ cup grated coconut</li>
           <li>1 tbsp ginger-garlic paste</li>
-          <li>1â€“2 green chillies, slit</li>
+          <li>1–2 green chillies, slit</li>
           <li>1 tsp red chilli powder</li>
           <li>1 tbsp coriander powder</li>
-          <li>Â½ tsp turmeric</li>
-          <li>Â½ tsp garam masala</li>
+          <li>½ tsp turmeric</li>
+          <li>½ tsp garam masala</li>
           <li>1 sprig curry leaves</li>
           <li>Whole spices: 1 bay leaf, 1-inch cinnamon, 3 cloves, 2 cardamom</li>
           <li>2 tbsp oil, salt, coriander to garnish</li>
@@ -696,11 +696,11 @@
         <p class="recipe-section-label">Method</p>
         <ol>
           <li>Grind grated coconut to a smooth paste with a little water. Set aside.</li>
-          <li>Heat oil, add whole spices and curry leaves, then onions. SautÃ© till golden.</li>
+          <li>Heat oil, add whole spices and curry leaves, then onions. Sauté till golden.</li>
           <li>Add ginger-garlic paste and green chillies; fry till raw smell goes.</li>
           <li>Add tomatoes, turmeric and salt; cook till mushy and oil separates.</li>
-          <li>Add chilli powder, coriander powder; stir 1 min. Add chicken and brown on high for 4â€“5 min.</li>
-          <li>Add the coconut paste and ~1 cup water. Cover and cook 18â€“20 min till chicken is tender.</li>
+          <li>Add chilli powder, coriander powder; stir 1 min. Add chicken and brown on high for 4–5 min.</li>
+          <li>Add the coconut paste and ~1 cup water. Cover and cook 18–20 min till chicken is tender.</li>
           <li>Finish with garam masala and coriander. Serve with rice or chapati.</li>
         </ol>
       </div>
@@ -710,26 +710,26 @@
   <!-- CHICKEN SUKKA -->
   <div class="recipe-card" id="r-sukka">
     <div class="recipe-head"><h2>Mangalorean Chicken Sukka</h2><span class="serves-pill">Serves 4</span></div>
-    <p class="recipe-meta">Dry, coconut-tossed chicken Â· Tuesday alternative</p>
+    <p class="recipe-meta">Dry, coconut-tossed chicken · Tuesday alternative</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Dry-roast &amp; grind</p>
         <ul>
-          <li>8â€“10 dry red chillies</li>
+          <li>8–10 dry red chillies</li>
           <li>2 tbsp coriander seeds</li>
           <li>1 tsp cumin seeds</li>
           <li>1 tsp black peppercorns</li>
           <li>1 tsp fennel seeds (saunf)</li>
-          <li>Â¼ tsp fenugreek (methi) seeds</li>
+          <li>¼ tsp fenugreek (methi) seeds</li>
           <li>Small piece tamarind</li>
         </ul>
         <p class="recipe-section-label">Main</p>
         <ul>
           <li>750 g chicken, cut small</li>
-          <li>Â½ tsp turmeric + salt (to marinate)</li>
+          <li>½ tsp turmeric + salt (to marinate)</li>
           <li>1 cup grated coconut</li>
           <li>2 onions, sliced</li>
-          <li>8â€“10 garlic cloves</li>
+          <li>8–10 garlic cloves</li>
           <li>1 tbsp ginger-garlic paste</li>
           <li>1 sprig curry leaves</li>
           <li>2 tbsp ghee / coconut oil</li>
@@ -751,8 +751,8 @@
 
   <!-- EGG BHURJI -->
   <div class="recipe-card" id="r-bhurji">
-    <div class="recipe-head"><h2>Egg Bhurji</h2><span class="serves-pill">Serves 2â€“3</span></div>
-    <p class="recipe-meta">Indian spiced scrambled eggs Â· Wednesday option</p>
+    <div class="recipe-head"><h2>Egg Bhurji</h2><span class="serves-pill">Serves 2–3</span></div>
+    <p class="recipe-meta">Indian spiced scrambled eggs · Wednesday option</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Ingredients</p>
@@ -760,11 +760,11 @@
           <li>4 eggs</li>
           <li>1 onion, finely chopped</li>
           <li>1 tomato, finely chopped</li>
-          <li>1â€“2 green chillies, chopped</li>
-          <li>Â½ tsp ginger-garlic paste (optional)</li>
-          <li>Â¼ tsp turmeric</li>
-          <li>Â½ tsp red chilli powder</li>
-          <li>Â¼ tsp garam masala (or pav bhaji masala)</li>
+          <li>1–2 green chillies, chopped</li>
+          <li>½ tsp ginger-garlic paste (optional)</li>
+          <li>¼ tsp turmeric</li>
+          <li>½ tsp red chilli powder</li>
+          <li>¼ tsp garam masala (or pav bhaji masala)</li>
           <li>2 tbsp oil (or oil + butter)</li>
           <li>Coriander leaves, salt</li>
         </ul>
@@ -773,7 +773,7 @@
         <p class="recipe-section-label">Method</p>
         <ol>
           <li>Beat eggs with a pinch of salt and turmeric; set aside.</li>
-          <li>Heat oil, sautÃ© onion till soft. Add chillies (and ginger-garlic if using).</li>
+          <li>Heat oil, sauté onion till soft. Add chillies (and ginger-garlic if using).</li>
           <li>Add tomato; cook till mushy. Stir in chilli powder and garam masala.</li>
           <li>Pour in beaten eggs. Let set a few seconds, then scramble and keep stirring till cooked but soft.</li>
           <li>Finish with coriander and a squeeze of lemon. Serve with rotis or pav.</li>
@@ -784,8 +784,8 @@
 
   <!-- EGG CURRY -->
   <div class="recipe-card" id="r-eggcurry">
-    <div class="recipe-head"><h2>Egg Curry</h2><span class="serves-pill">Serves 3â€“4</span></div>
-    <p class="recipe-meta">Boiled eggs in onion-tomato gravy Â· Wednesday alternative</p>
+    <div class="recipe-head"><h2>Egg Curry</h2><span class="serves-pill">Serves 3–4</span></div>
+    <p class="recipe-meta">Boiled eggs in onion-tomato gravy · Wednesday alternative</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Ingredients</p>
@@ -794,10 +794,10 @@
           <li>2 onions, finely chopped/pureed</li>
           <li>2 tomatoes, pureed</li>
           <li>1 tbsp ginger-garlic paste</li>
-          <li>Â½ tsp turmeric</li>
+          <li>½ tsp turmeric</li>
           <li>1 tsp red chilli powder</li>
           <li>1 tbsp coriander powder</li>
-          <li>Â½ tsp garam masala</li>
+          <li>½ tsp garam masala</li>
           <li>2 tbsp oil, salt</li>
           <li>Coriander leaves to garnish</li>
         </ul>
@@ -806,10 +806,10 @@
         <p class="recipe-section-label">Method</p>
         <ol>
           <li>Lightly fry the boiled eggs with a pinch of turmeric and chilli powder till golden; set aside.</li>
-          <li>Heat oil, sautÃ© onions till golden. Add ginger-garlic paste; fry till raw smell goes.</li>
+          <li>Heat oil, sauté onions till golden. Add ginger-garlic paste; fry till raw smell goes.</li>
           <li>Add tomato puree, turmeric, chilli and coriander powder and salt. Cook till oil separates.</li>
           <li>Add ~1 cup water, simmer 5 min to form a gravy.</li>
-          <li>Slip in the eggs, simmer 3â€“4 min. Finish with garam masala and coriander. Serve with rice or chapati.</li>
+          <li>Slip in the eggs, simmer 3–4 min. Finish with garam masala and coriander. Serve with rice or chapati.</li>
         </ol>
       </div>
     </div>
@@ -817,21 +817,21 @@
 
   <!-- PANEER BUTTER MASALA -->
   <div class="recipe-card" id="r-pbm">
-    <div class="recipe-head"><h2>Paneer Butter Masala</h2><span class="serves-pill">Serves 3â€“4</span></div>
-    <p class="recipe-meta">Creamy tomato-cashew gravy Â· Thursday option</p>
+    <div class="recipe-head"><h2>Paneer Butter Masala</h2><span class="serves-pill">Serves 3–4</span></div>
+    <p class="recipe-meta">Creamy tomato-cashew gravy · Thursday option</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Ingredients</p>
         <ul>
-          <li>250â€“300 g paneer, cubed</li>
+          <li>250–300 g paneer, cubed</li>
           <li>2 onions, chopped</li>
           <li>3 tomatoes, pureed</li>
-          <li>12â€“15 cashews (soaked)</li>
+          <li>12–15 cashews (soaked)</li>
           <li>1 tbsp ginger-garlic paste</li>
           <li>2 tbsp butter + 1 tsp oil</li>
           <li>2 tbsp cream</li>
           <li>1 tsp red chilli powder (Kashmiri)</li>
-          <li>Â½ tsp garam masala</li>
+          <li>½ tsp garam masala</li>
           <li>1 tsp kasuri methi</li>
           <li>Whole spices (optional): 1 bay leaf, small cinnamon, 3 cloves</li>
           <li>Salt, pinch of sugar</li>
@@ -840,10 +840,10 @@
       <div>
         <p class="recipe-section-label">Method</p>
         <ol>
-          <li>SautÃ© onions, ginger-garlic, cashews and tomatoes till soft. Cool and blend to a smooth puree (strain for extra smoothness).</li>
+          <li>Sauté onions, ginger-garlic, cashews and tomatoes till soft. Cool and blend to a smooth puree (strain for extra smoothness).</li>
           <li>Heat butter, add whole spices if using, then the puree. Cook till it thickens and butter separates at the edges.</li>
-          <li>Add chilli powder, salt, sugar and ~Â½ cup water; simmer to a glossy gravy.</li>
-          <li>Add paneer cubes; simmer gently 2â€“3 min (don't boil hard, cream can split).</li>
+          <li>Add chilli powder, salt, sugar and ~½ cup water; simmer to a glossy gravy.</li>
+          <li>Add paneer cubes; simmer gently 2–3 min (don't boil hard, cream can split).</li>
           <li>Stir in cream, garam masala and crushed kasuri methi. Serve with naan, roti or rice.</li>
         </ol>
       </div>
@@ -852,8 +852,8 @@
 
   <!-- PALAK PANEER -->
   <div class="recipe-card" id="r-palak">
-    <div class="recipe-head"><h2>Palak Paneer</h2><span class="serves-pill">Serves 3â€“4</span></div>
-    <p class="recipe-meta">Paneer in smooth spinach gravy Â· Thursday alternative</p>
+    <div class="recipe-head"><h2>Palak Paneer</h2><span class="serves-pill">Serves 3–4</span></div>
+    <p class="recipe-meta">Paneer in smooth spinach gravy · Thursday alternative</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Ingredients</p>
@@ -863,11 +863,11 @@
           <li>1 onion, chopped</li>
           <li>1 tomato, chopped</li>
           <li>1 tsp ginger-garlic paste</li>
-          <li>1â€“2 green chillies</li>
+          <li>1–2 green chillies</li>
           <li>1 tsp cumin seeds</li>
-          <li>Â¼ tsp turmeric</li>
-          <li>Â½ tsp red chilli powder</li>
-          <li>Â½ tsp garam masala</li>
+          <li>¼ tsp turmeric</li>
+          <li>½ tsp red chilli powder</li>
+          <li>½ tsp garam masala</li>
           <li>1 tbsp cream + 1 tsp butter</li>
           <li>2 tbsp oil, salt</li>
         </ul>
@@ -876,9 +876,9 @@
         <p class="recipe-section-label">Method</p>
         <ol>
           <li>Blanch spinach in hot water 2 min, then ice water (keeps it green). Blend to a puree.</li>
-          <li>Heat oil + butter, crackle cumin. Add onion, ginger-garlic and chillies; sautÃ© golden.</li>
+          <li>Heat oil + butter, crackle cumin. Add onion, ginger-garlic and chillies; sauté golden.</li>
           <li>Add turmeric, chilli powder, then tomato; cook till soft.</li>
-          <li>Add spinach puree and ~Â½ cup water; simmer 5 min (don't overcook, keeps colour bright).</li>
+          <li>Add spinach puree and ~½ cup water; simmer 5 min (don't overcook, keeps colour bright).</li>
           <li>Add paneer, garam masala and salt; simmer 2 min.</li>
           <li>Swirl in cream. Serve with roti or rice.</li>
         </ol>
@@ -889,7 +889,7 @@
   <!-- AVIAL -->
   <div class="recipe-card" id="r-avial">
     <div class="recipe-head"><h2>Avial</h2><span class="serves-pill">Serves 4</span></div>
-    <p class="recipe-meta">Kerala mixed-vegetable coconut curry Â· Friday option</p>
+    <p class="recipe-meta">Kerala mixed-vegetable coconut curry · Friday option</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Vegetables (~3 cups, batons)</p>
@@ -904,18 +904,18 @@
         <ul>
           <li>1 cup grated coconut</li>
           <li>1 tsp cumin seeds</li>
-          <li>2â€“3 green chillies</li>
-          <li>Â½ tsp turmeric</li>
-          <li>Â½ cup curd (whisked)</li>
-          <li>1â€“2 tbsp coconut oil</li>
+          <li>2–3 green chillies</li>
+          <li>½ tsp turmeric</li>
+          <li>½ cup curd (whisked)</li>
+          <li>1–2 tbsp coconut oil</li>
           <li>1 sprig curry leaves, salt</li>
         </ul>
       </div>
       <div>
         <p class="recipe-section-label">Method</p>
         <ol>
-          <li>Cut all veg into 2-inch batons. Add the slow-cooking ones (drumstick, yam, banana) first with turmeric, salt and Â½ cup water.</li>
-          <li>Add carrot and beans next. Cook covered till just tender â€” al dente, not mushy.</li>
+          <li>Cut all veg into 2-inch batons. Add the slow-cooking ones (drumstick, yam, banana) first with turmeric, salt and ½ cup water.</li>
+          <li>Add carrot and beans next. Cook covered till just tender — al dente, not mushy.</li>
           <li>Coarsely grind coconut, cumin and green chillies (pulse only). Add to the veg; mix gently and simmer 1 min.</li>
           <li>Turn off heat. Stir in whisked curd gently.</li>
           <li>Drizzle coconut oil and add fresh curry leaves. Cover 5 min for flavours to infuse. Serve with rice.</li>
@@ -927,16 +927,16 @@
   <!-- SAMBAR -->
   <div class="recipe-card" id="r-sambar">
     <div class="recipe-head"><h2>Sambar with Vegetables</h2><span class="serves-pill">Serves 4</span></div>
-    <p class="recipe-meta">Toor dal &amp; vegetable stew Â· Friday alternative</p>
+    <p class="recipe-meta">Toor dal &amp; vegetable stew · Friday alternative</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Ingredients</p>
         <ul>
-          <li>Â¾ cup toor dal</li>
+          <li>¾ cup toor dal</li>
           <li>2 drumsticks, 1 brinjal, 1 tomato, 1 onion (vegetables)</li>
           <li>Lemon-sized tamarind (or 1 tsp paste)</li>
           <li>2 tbsp sambar powder</li>
-          <li>Â½ tsp turmeric</li>
+          <li>½ tsp turmeric</li>
           <li>Salt</li>
         </ul>
         <p class="recipe-section-label">Tempering</p>
@@ -953,7 +953,7 @@
         <ol>
           <li>Pressure-cook toor dal with turmeric till soft; mash.</li>
           <li>Cook the vegetables with tamarind extract, sambar powder, salt and water till tender.</li>
-          <li>Add the mashed dal; simmer 5â€“8 min to bring it together. Adjust consistency with water.</li>
+          <li>Add the mashed dal; simmer 5–8 min to bring it together. Adjust consistency with water.</li>
           <li>Heat oil, splutter mustard seeds, add red chillies, hing and curry leaves.</li>
           <li>Pour the tempering over the sambar. Serve with rice (and a drizzle of ghee).</li>
         </ol>
@@ -963,8 +963,8 @@
 
   <!-- PRAWN MASALA -->
   <div class="recipe-card" id="r-prawnmasala">
-    <div class="recipe-head"><h2>Prawn Masala</h2><span class="serves-pill">Serves 3â€“4</span></div>
-    <p class="recipe-meta">Coastal spiced prawns Â· Saturday option</p>
+    <div class="recipe-head"><h2>Prawn Masala</h2><span class="serves-pill">Serves 3–4</span></div>
+    <p class="recipe-meta">Coastal spiced prawns · Saturday option</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Ingredients</p>
@@ -972,12 +972,12 @@
           <li>500 g prawns, cleaned &amp; deveined</li>
           <li>1 onion, finely chopped</li>
           <li>1 large tomato, chopped</li>
-          <li>Â¼ cup grated coconut</li>
+          <li>¼ cup grated coconut</li>
           <li>1 tsp ginger-garlic paste</li>
-          <li>Â½â€“Â¾ tsp Kashmiri red chilli powder</li>
+          <li>½–¾ tsp Kashmiri red chilli powder</li>
           <li>1 tsp coriander powder</li>
-          <li>Â½â€“Â¾ tsp garam masala</li>
-          <li>â…› tsp turmeric</li>
+          <li>½–¾ tsp garam masala</li>
+          <li>⅛ tsp turmeric</li>
           <li>1 sprig curry leaves</li>
           <li>2 tbsp oil (coconut oil ideal), salt</li>
         </ul>
@@ -986,10 +986,10 @@
         <p class="recipe-section-label">Method</p>
         <ol>
           <li>Optionally toss prawns in a pinch of salt, chilli powder and garam masala.</li>
-          <li>Heat oil, sautÃ© onion till pink. Add ginger-garlic; fry 1 min.</li>
+          <li>Heat oil, sauté onion till pink. Add ginger-garlic; fry 1 min.</li>
           <li>Add tomato, salt and turmeric; cook till mushy.</li>
-          <li>Add chilli powder, coriander powder, garam masala and grated coconut; stir 1â€“2 min.</li>
-          <li>Add prawns and a splash of water. Cook just 4â€“5 min â€” prawns turn rubbery if overcooked.</li>
+          <li>Add chilli powder, coriander powder, garam masala and grated coconut; stir 1–2 min.</li>
+          <li>Add prawns and a splash of water. Cook just 4–5 min — prawns turn rubbery if overcooked.</li>
           <li>Finish with curry leaves and coriander. Serve with rice.</li>
         </ol>
       </div>
@@ -998,19 +998,19 @@
 
   <!-- PRAWN GASSI -->
   <div class="recipe-card" id="r-gassi">
-    <div class="recipe-head"><h2>Prawn Gassi</h2><span class="serves-pill">Serves 3â€“4</span></div>
-    <p class="recipe-meta">Mangalorean coconut prawn curry Â· Saturday alternative</p>
+    <div class="recipe-head"><h2>Prawn Gassi</h2><span class="serves-pill">Serves 3–4</span></div>
+    <p class="recipe-meta">Mangalorean coconut prawn curry · Saturday alternative</p>
     <div class="two-col">
       <div>
         <p class="recipe-section-label">Masala paste</p>
         <ul>
           <li>1 cup grated coconut</li>
-          <li>6â€“8 dry red chillies (byadgi)</li>
+          <li>6–8 dry red chillies (byadgi)</li>
           <li>1 tbsp coriander seeds</li>
-          <li>Â½ tsp cumin seeds</li>
-          <li>Â¼ tsp methi seeds</li>
-          <li>4â€“5 garlic cloves</li>
-          <li>Â½ tsp turmeric</li>
+          <li>½ tsp cumin seeds</li>
+          <li>¼ tsp methi seeds</li>
+          <li>4–5 garlic cloves</li>
+          <li>½ tsp turmeric</li>
           <li>Small piece tamarind</li>
         </ul>
         <p class="recipe-section-label">Main</p>
@@ -1028,7 +1028,7 @@
           <li>Heat coconut oil, fry sliced onion and curry leaves till soft.</li>
           <li>Add the ground masala paste; cook on low till it doesn't smell raw (don't let it burn).</li>
           <li>Add ~1.5 cups water (or prawn stock) and salt; bring to a boil.</li>
-          <li>Add prawns; cook just 3â€“5 min, then turn off and let them soak in the flavour.</li>
+          <li>Add prawns; cook just 3–5 min, then turn off and let them soak in the flavour.</li>
           <li>Garnish with coriander. Serve with neer dosa or rice.</li>
         </ol>
       </div>
@@ -1042,22 +1042,22 @@
   <header>
     <p class="eyebrow">Stock Up Each Week</p>
     <h1>Grocery <span>List</span></h1>
-    <p class="subtitle">Covers all 12 dishes Â· Tap items to check off as you shop</p>
+    <p class="subtitle">Covers all 12 dishes · Tap items to check off as you shop</p>
   </header>
 
   <div class="tip-box">
     <strong>Buy fresh on the day:</strong> chicken Tuesday morning, prawns Saturday morning.
     <strong>Buy once, lasts months:</strong> whole spices, amchur, kasuri methi.
-    <strong>Coconut:</strong> one whole coconut covers sukka, avial, gassi &amp; curry â€” or grab frozen grated coconut.
+    <strong>Coconut:</strong> one whole coconut covers sukka, avial, gassi &amp; curry — or grab frozen grated coconut.
   </div>
 
   <div class="filter-bar">
     <button class="filter-btn all active" onclick="filterCat('all', this)">All</button>
-    <button class="filter-btn" onclick="filterCat('produce', this)">ðŸ¥• Produce</button>
+    <button class="filter-btn" onclick="filterCat('produce', this)">🥕 Produce</button>
     <button class="filter-btn" onclick="filterCat('protein', this)">ðŸ— Protein</button>
-    <button class="filter-btn" onclick="filterCat('dairy', this)">ðŸ§€ Dairy</button>
-    <button class="filter-btn" onclick="filterCat('pantry', this)">ðŸ«™ Pantry</button>
-    <button class="filter-btn" onclick="filterCat('spices', this)">ðŸŒ¶ Spices</button>
+    <button class="filter-btn" onclick="filterCat('dairy', this)">🧀 Dairy</button>
+    <button class="filter-btn" onclick="filterCat('pantry', this)">🫙 Pantry</button>
+    <button class="filter-btn" onclick="filterCat('spices', this)">🌶 Spices</button>
   </div>
 
   <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
@@ -1068,37 +1068,37 @@
   <div class="grid">
 
     <div class="section-card" data-cat="produce">
-      <div class="section-header"><div class="section-icon icon-produce">ðŸ¥•</div><p class="section-title">Fresh Produce</p><p class="section-count">Vegetables</p></div>
+      <div class="section-header"><div class="section-icon icon-produce">🥕</div><p class="section-title">Fresh Produce</p><p class="section-count">Vegetables</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Onions</p><p class="item-note">Almost every dish</p></div><p class="item-qty">1.5 kg</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Tomatoes</p><p class="item-note">Curries, bhurji, masalas</p></div><p class="item-qty">1 kg</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Potatoes</p><p class="item-note">Aloo paratha</p></div><p class="item-qty">500 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Cauliflower</p><p class="item-note">Gobi paratha</p></div><p class="item-qty">1 head</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Spinach (Palak)</p><p class="item-note">Palak paneer</p></div><p class="item-qty">400 g</p></div>
-      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Drumstick</p><p class="item-note">Avial + Sambar</p></div><p class="item-qty">4â€“5 sticks</p></div>
+      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Drumstick</p><p class="item-note">Avial + Sambar</p></div><p class="item-qty">4–5 sticks</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Raw Banana</p><p class="item-note">Avial</p></div><p class="item-qty">2</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Yam (Suran)</p><p class="item-note">Avial</p></div><p class="item-qty">200 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Carrot</p><p class="item-note">Avial</p></div><p class="item-qty">3</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Beans</p><p class="item-note">Avial + Sambar</p></div><p class="item-qty">150 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Brinjal</p><p class="item-note">Sambar</p></div><p class="item-qty">2</p></div>
-      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Green Chillies</p><p class="item-note">Across all dishes</p></div><p class="item-qty">15â€“20</p></div>
+      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Green Chillies</p><p class="item-note">Across all dishes</p></div><p class="item-qty">15–20</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Ginger</p><p class="item-note">All curries &amp; parathas</p></div><p class="item-qty">100 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Garlic</p><p class="item-note">All curries</p></div><p class="item-qty">2 heads</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Fresh Coriander</p><p class="item-note">Garnish</p></div><p class="item-qty">2 bunches</p></div>
-      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Curry Leaves</p><p class="item-note">Sambar, sukka, prawns</p></div><p class="item-qty">3â€“4 sprigs</p></div>
+      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Curry Leaves</p><p class="item-note">Sambar, sukka, prawns</p></div><p class="item-qty">3–4 sprigs</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Shallots</p><p class="item-note">Avial, sambar tempering</p></div><p class="item-qty">200 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Lemon</p><p class="item-note">Finishing, bhurji</p></div><p class="item-qty">3</p></div>
     </div>
 
     <div class="section-card" data-cat="protein">
       <div class="section-header"><div class="section-icon icon-protein">ðŸ—</div><p class="section-title">Proteins</p><p class="section-count">Meat &amp; Seafood</p></div>
-      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Chicken (with bone)</p><p class="item-note">Buy fresh Tuesday</p></div><p class="item-qty">750 gâ€“1 kg</p></div>
+      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Chicken (with bone)</p><p class="item-note">Buy fresh Tuesday</p></div><p class="item-qty">750 g–1 kg</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Prawns (medium, cleaned)</p><p class="item-note">Buy fresh Saturday</p></div><p class="item-qty">500 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Eggs</p><p class="item-note">Bhurji or curry</p></div><p class="item-qty">6</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Toor Dal</p><p class="item-note">Sambar</p></div><p class="item-qty">200 g</p></div>
     </div>
 
     <div class="section-card" data-cat="dairy">
-      <div class="section-header"><div class="section-icon icon-dairy">ðŸ§€</div><p class="section-title">Dairy</p><p class="section-count">Paneer, curd &amp; more</p></div>
+      <div class="section-header"><div class="section-icon icon-dairy">🧀</div><p class="section-title">Dairy</p><p class="section-count">Paneer, curd &amp; more</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Paneer</p><p class="item-note">Butter masala or palak</p></div><p class="item-qty">400 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Curd / Dahi</p><p class="item-note">Avial, paratha side</p></div><p class="item-qty">500 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Fresh Cream</p><p class="item-note">Paneer dishes</p></div><p class="item-qty">100 ml</p></div>
@@ -1108,25 +1108,25 @@
     </div>
 
     <div class="section-card" data-cat="pantry">
-      <div class="section-header"><div class="section-icon icon-pantry">ðŸ«™</div><p class="section-title">Pantry Staples</p><p class="section-count">Flour, oil &amp; basics</p></div>
+      <div class="section-header"><div class="section-icon icon-pantry">🫙</div><p class="section-title">Pantry Staples</p><p class="section-count">Flour, oil &amp; basics</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Whole Wheat Flour (Atta)</p><p class="item-note">Both parathas</p></div><p class="item-qty">1 kg</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Coconut Oil</p><p class="item-note">Avial, gassi</p></div><p class="item-qty">200 ml</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Cooking Oil</p><p class="item-note">General use</p></div><p class="item-qty">500 ml</p></div>
-      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Grated Coconut</p><p class="item-note">Sukka, avial, prawns, curry â€” 1 whole coconut</p></div><p class="item-qty">2 cups</p></div>
+      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Grated Coconut</p><p class="item-note">Sukka, avial, prawns, curry — 1 whole coconut</p></div><p class="item-qty">2 cups</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Tamarind</p><p class="item-note">Sambar, gassi, sukka</p></div><p class="item-qty">50 g</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Ginger-Garlic Paste</p><p class="item-note">If not fresh</p></div><p class="item-qty">1 jar</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Mango Pickle</p><p class="item-note">Paratha side</p></div><p class="item-qty">1 jar</p></div>
     </div>
 
     <div class="section-card" data-cat="spices">
-      <div class="section-header"><div class="section-icon icon-spices">ðŸŒ¶</div><p class="section-title">Spices &amp; Masalas</p><p class="section-count">Check &amp; restock</p></div>
+      <div class="section-header"><div class="section-icon icon-spices">🌶</div><p class="section-title">Spices &amp; Masalas</p><p class="section-count">Check &amp; restock</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Red Chilli Powder</p></div><p class="item-qty">check</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Turmeric Powder</p></div><p class="item-qty">check</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Coriander Powder</p></div><p class="item-qty">check</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Garam Masala</p></div><p class="item-qty">check</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Cumin Seeds (Jeera)</p></div><p class="item-qty">check</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Mustard Seeds</p><p class="item-note">Sambar, avial</p></div><p class="item-qty">check</p></div>
-      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Dry Red Chillies</p><p class="item-note">Sukka, sambar, gassi</p></div><p class="item-qty">15â€“20</p></div>
+      <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Dry Red Chillies</p><p class="item-note">Sukka, sambar, gassi</p></div><p class="item-qty">15–20</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Coriander Seeds</p><p class="item-note">Sukka, gassi</p></div><p class="item-qty">2 tbsp</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Fennel Seeds (Saunf)</p><p class="item-note">Sukka, gassi</p></div><p class="item-qty">1 tbsp</p></div>
       <div class="item" onclick="toggleItem(this)"><div class="item-check"></div><div><p class="item-name">Fenugreek Seeds (Methi)</p><p class="item-note">Sukka, gassi</p></div><p class="item-qty">1 tsp</p></div>
@@ -1203,10 +1203,10 @@
   </div>
 </div>
 
-<footer>Bangalore Home Kitchen Â· 6 days, 12 dishes Â· Hosted on GitHub Pages</footer>
+<footer>Bangalore Home Kitchen · 6 days, 12 dishes · Hosted on GitHub Pages</footer>
 
 <script>
-  // â”€â”€ Page navigation â”€â”€
+  // ── Page navigation ──
   function showPage(id, btn) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
@@ -1215,7 +1215,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // â”€â”€ Jump to a recipe from the plan page â”€â”€
+  // ── Jump to a recipe from the plan page ──
   function gotoRecipe(recipeId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('recipes').classList.add('active');
@@ -1225,7 +1225,7 @@
     setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
   }
 
-  // â”€â”€ Day card meal toggle â”€â”€
+  // ── Day card meal toggle ──
   function switchMeal(day, variant) {
     document.querySelectorAll('[id^="' + day + '-"]').forEach(el => el.classList.remove('active'));
     document.getElementById(day + '-' + variant).classList.add('active');
@@ -1234,7 +1234,7 @@
     card.querySelectorAll('.toggle-btn')[variant === 'a' ? 0 : 1].classList.add('active');
   }
 
-  // â”€â”€ Grocery checkboxes â”€â”€
+  // ── Grocery checkboxes ──
   function toggleItem(el) { el.classList.toggle('checked'); updateProgress(); }
   function updateProgress() {
     const all = document.querySelectorAll('#grocery .item');
