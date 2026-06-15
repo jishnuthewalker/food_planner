@@ -1,0 +1,8 @@
+name = "food-planner-dishes"
+main = "src/index.js"
+compatibility_date = "2026-06-16"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "food_planner"
+database_id = "REPLACE_ME"
