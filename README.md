@@ -1,30 +1,32 @@
 # Bangalore Kitchen — Weekly Meal Plan
 
-A single-page site with three tabs: **Week Plan**, **Recipes** (all 12 dishes), and a checkable **Grocery List**. Everything is in one `index.html` file — no build step, no dependencies.
+A single-page meal planner with three tabs: **Week Plan**, **Recipes**, and a checkable **Grocery List**. The static UI still lives in `index.html`, but household-added dishes now come from a Cloudflare Worker + D1 backend.
 
-## Host it on GitHub Pages
+## Structure
 
-1. Create a new repository on GitHub (e.g. `meal-plan`).
-2. Upload `index.html` (and optionally this `README.md`) to the repo. Either drag-and-drop in the GitHub web UI, or:
-   ```bash
-   git init
-   git add index.html README.md
-   git commit -m "Add meal plan site"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/meal-plan.git
-   git push -u origin main
-   ```
-3. In the repo, go to **Settings → Pages**.
-4. Under **Build and deployment → Source**, pick **Deploy from a branch**.
-5. Select branch **main** and folder **/ (root)**, then **Save**.
-6. Wait ~1 minute. Your site will be live at:
-   `https://<your-username>.github.io/meal-plan/`
+- `index.html` - the GitHub Pages frontend
+- `cloudflare/worker/src/index.js` - dish API, unlock flow, and CRUD handlers
+- `cloudflare/worker/migrations/0001_init.sql` - D1 schema
+- `docs/superpowers/specs/` - feature spec
+- `docs/superpowers/plans/` - implementation plan
+
+## How It Works
+
+- Public users can browse the built-in meal plan and any household dishes stored in D1.
+- Housemates can unlock writes with the shared passcode, then add, edit, or delete dishes.
+- The frontend stores the API base URL and write token in `localStorage`.
+
+## Deploying the Backend
+
+1. Create the D1 database and apply `cloudflare/worker/migrations/0001_init.sql`.
+2. Set `HOUSEHOLD_PASSCODE_HASH` as a Worker secret.
+3. Update `cloudflare/worker/wrangler.toml` with your D1 database ID.
+4. Deploy the Worker and copy the Worker URL into the site using the **API URL** button.
+
+## GitHub Pages
+
+Keep `index.html` on GitHub Pages. The page is static and only needs the Worker URL to fetch household dishes.
 
 ## Editing
 
-Open `index.html` in any text editor. Recipes, ingredients and quantities are plain HTML — search for a dish name and edit in place. No tooling required.
-
-## Notes
-
-- Checkboxes on the grocery list reset on refresh (no data is stored). Use **Print List** for a paper copy to hand off.
-- Built mobile-first; works fine on a phone in the kitchen.
+Open `index.html` in any editor. The built-in dishes are still hardcoded for now, while added household dishes are stored in the backend.

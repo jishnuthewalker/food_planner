@@ -1,0 +1,50 @@
+CREATE TABLE IF NOT EXISTS dishes (
+  id TEXT PRIMARY KEY,
+  slug TEXT NOT NULL UNIQUE,
+  name TEXT NOT NULL,
+  category TEXT NOT NULL,
+  servings TEXT NOT NULL,
+  notes TEXT,
+  published INTEGER NOT NULL DEFAULT 1,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS dish_ingredients (
+  id TEXT PRIMARY KEY,
+  dish_id TEXT NOT NULL REFERENCES dishes(id) ON DELETE CASCADE,
+  section TEXT NOT NULL DEFAULT '',
+  item TEXT NOT NULL,
+  quantity TEXT NOT NULL DEFAULT '',
+  note TEXT NOT NULL DEFAULT '',
+  sort_order INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS dish_steps (
+  id TEXT PRIMARY KEY,
+  dish_id TEXT NOT NULL REFERENCES dishes(id) ON DELETE CASCADE,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  body TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS dish_tags (
+  id TEXT PRIMARY KEY,
+  dish_id TEXT NOT NULL REFERENCES dishes(id) ON DELETE CASCADE,
+  tag TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS write_sessions (
+  id TEXT PRIMARY KEY,
+  token_hash TEXT NOT NULL UNIQUE,
+  created_at TEXT NOT NULL,
+  expires_at TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS audit_log (
+  id TEXT PRIMARY KEY,
+  action TEXT NOT NULL,
+  target_type TEXT NOT NULL,
+  target_id TEXT NOT NULL,
+  details_json TEXT NOT NULL DEFAULT '{}',
+  created_at TEXT NOT NULL
+);
