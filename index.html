@@ -93,7 +93,7 @@
     text-transform: uppercase; color: var(--primary); margin-bottom: 12px;
   }
   h1 {
-    font-size: clamp(30px,6vw,54px); font-weight: 800; line-height: 1.06;
+    font-size: clamp(26px,4vw,42px); font-weight: 800; line-height: 1.08;
     letter-spacing: -0.05em;
     text-wrap: balance;
   }
@@ -105,31 +105,34 @@
   }
 
   #plan > header {
-    background:
-      radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 24%),
-      linear-gradient(180deg, #0a1530 0%, #111d3f 100%);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 26px;
-    padding: 42px 24px 38px;
-    box-shadow: 0 24px 48px -20px rgba(10,21,48,.45);
-    color: #fff;
-    overflow: hidden;
+    text-align: left;
+    margin-bottom: 24px;
+    padding: 8px 2px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: inherit;
+    overflow: visible;
   }
-  #plan > header::after {
-    content: '';
-    position: absolute;
-    inset: auto -6% -16% auto;
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(86,69,212,.28) 0%, rgba(86,69,212,0) 68%);
-    filter: blur(10px);
-    pointer-events: none;
+  #plan > header::after { display: none; }
+  #plan > header .eyebrow {
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-size: 10px;
+    letter-spacing: .22em;
   }
-  #plan > header .eyebrow { color: #d6b6f6; }
-  #plan > header h1 { color: #fff; }
-  #plan > header h1 span { color: #d6b6f6; }
-  #plan > header .subtitle { color: rgba(255,255,255,.8); }
+  #plan > header h1 {
+    max-width: 11ch;
+  }
+  #plan > header h1 span { color: var(--primary); }
+  #plan > header .subtitle {
+    color: var(--muted);
+    margin-top: 10px;
+    margin-left: 0;
+    max-width: 56ch;
+    font-size: 14px;
+  }
   #recipes > header, #grocery > header { padding-top: 10px; }
 
   /* -- Grid -- */
